@@ -26,8 +26,12 @@ app.use("/users", userController);
 const chatController = require("./controllers/chat.controller");
 const messageController = require("./controllers/message.controller");
 
-app.use("/chats",chatController)
-app.use('/messages', messageController)
+app.use("/chats",chatController);
+app.use('/messages', messageController);
+
+// status
+const statusController=require("./controllers/status.controller.js");
+app.use("/status",statusController);
 
 module.exports = app;
 
